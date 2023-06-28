@@ -38,7 +38,7 @@ public class CruddemoApplication {
 			readStudent(studentDao);
 		};
 	}*/
- 
+
 /*	@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
 		return runner ->{
