@@ -65,9 +65,9 @@ public class CruddemoApplication {
 		int studentId = 1;
 		System.out.println("Getting the student with id: " + studentId);
 		Student myStudent = studentDao.findById(studentId);
-		//change the firstname "Rahul" to "Ravi"
+		//change the firstname  "Ravi" to "Rahul"
 		System.out.println("updating student ...");
-		myStudent.setFirstName("Ravi");
+		myStudent.setFirstName("Rahul");
 
 		//update the student
 		studentDao.update(myStudent);
