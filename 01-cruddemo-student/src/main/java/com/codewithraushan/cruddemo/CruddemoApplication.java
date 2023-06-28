@@ -24,13 +24,13 @@ public class CruddemoApplication {
 		};
 	}*/
 
-	/*@Bean
+	@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
 		return runner ->{
 //			createStudent(studentDao);
 			createMultipleStudent(studentDao);
 		};
-	}*/
+	}
 
 	/*@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
@@ -38,7 +38,7 @@ public class CruddemoApplication {
 			readStudent(studentDao);
 		};
 	}*/
-
+ 
 /*	@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
 		return runner ->{
@@ -67,12 +67,12 @@ public class CruddemoApplication {
 		};
 	}
 */
-	@Bean
+	/*@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
 		return runner ->{
 			deleteAllStudent(studentDao);
 		};
-	}
+	}*/
 
 	private void deleteAllStudent(StudentDao studentDao) {
 		System.out.println("Deleting all student...");
