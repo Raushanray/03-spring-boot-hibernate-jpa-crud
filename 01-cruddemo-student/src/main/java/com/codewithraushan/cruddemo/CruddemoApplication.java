@@ -60,11 +60,24 @@ public class CruddemoApplication {
 		};
 	}*/
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
 		return runner ->{
 			deleteStudent(studentDao);
 		};
+	}
+*/
+	@Bean
+	public CommandLineRunner commandLineRunner(StudentDao studentDao){
+		return runner ->{
+			deleteAllStudent(studentDao);
+		};
+	}
+
+	private void deleteAllStudent(StudentDao studentDao) {
+		System.out.println("Deleting all student...");
+		int numRowsDeleted = studentDao.deleteAll();
+		System.out.println("Deleted rows count: " + numRowsDeleted);
 	}
 
 	private void deleteStudent(StudentDao studentDao) {
