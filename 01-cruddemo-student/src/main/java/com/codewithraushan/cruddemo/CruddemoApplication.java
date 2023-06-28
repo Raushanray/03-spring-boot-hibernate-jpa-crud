@@ -53,11 +53,24 @@ public class CruddemoApplication {
 		};
 	}*/
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
 		return runner ->{
 			updateStudent(studentDao);
 		};
+	}*/
+
+	@Bean
+	public CommandLineRunner commandLineRunner(StudentDao studentDao){
+		return runner ->{
+			deleteStudent(studentDao);
+		};
+	}
+
+	private void deleteStudent(StudentDao studentDao) {
+		int studentId = 3;
+		System.out.println("deleting the students id: " + studentId);
+		studentDao.delete(studentId);
 	}
 
 	private void updateStudent(StudentDao studentDao) {
